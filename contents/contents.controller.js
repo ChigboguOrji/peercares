@@ -1,4 +1,5 @@
-const { encodeId, decodeId } = require('../utils/string-shortner')
+const Contents = require('./contents.model')
+
 module.exports = {
 	// GET
 	// home page
@@ -14,8 +15,14 @@ module.exports = {
 
 	//	POST
 	// add new resource
-	postAddNewResource: (req, res, next) => {
-		res.send('Post to add new resource')
+	postAddNewResource: async (req, res, next) => {
+		const content = new Contents({ ...req.body })
+		content.save(function (err, saved) {
+			console.log(err)
+			if (err) return next(err)
+		})
+		console.log('saved')
+		res.send('form')
 	},
 
 	// GET

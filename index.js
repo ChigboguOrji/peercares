@@ -2,13 +2,26 @@ require('dotenv').config()
 const path = require('path')
 const http = require('http')
 const express = require('express')
+const mongoose = require('mongoose')
 const compression = require('compression')
 const morgan = require('morgan')
 const PORT = process.env.PORT || 8080
-
+const DB_URI = process.env.DB_URI || process.env.LOCAL_ENV
 const routes = require('./contents/contents.routes')
 
 const server = express()
+
+// connect to database
+mongoose
+	.connect(DB_URI, {
+		useUnifiedTopology: true,
+		useNewUrlParser: true,
+		keepAlive: true,
+		keepAliveInitialDelay: 3000,
+		poolSize: 10,
+	})
+	.then(() => console.log('Database connect success!'))
+	.catch(err => console.log('Error connecting database! ::: ', err))
 
 // configure middlewares
 server.use(compression())

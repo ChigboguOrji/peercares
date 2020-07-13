@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const categories = 'blog article book uncategorized'.split('')
+const categories = ['blog', 'article', 'book', 'uncategorized']
 
 const ContentSchema = new Schema(
 	{
@@ -29,6 +29,7 @@ const ContentSchema = new Schema(
 		contentCategory: {
 			type: String,
 			enum: categories,
+			lowercase:true,
 			required: function () {
 				return this.contentCategory
 			},
