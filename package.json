@@ -1,0 +1,27 @@
+{
+	"name": "shareit",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "yarn run server",
+		"server": "nodemon index.js",
+		"test": "jest"
+	},
+	"dependencies": {
+		"bootstrap": "^4.5.0",
+		"compression": "^1.7.4",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"jquery": "^3.5.1",
+		"mongoose": "^5.9.23",
+		"morgan": "^1.10.0",
+		"nodemon": "^2.0.4",
+		"popper.js": "^1.16.1",
+		"pug": "^3.0.0"
+	},
+	"devDependencies": {
+		"jest": "^26.1.0",
+		"supertest": "^4.0.2"
+	}
+}

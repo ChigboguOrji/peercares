@@ -1,0 +1,38 @@
+extends layout
+
+block main
+  section(class='container-fluid')
+    div(class='row')
+      div(class='col d-flex flex-column justify-content-center bg-info text-light align-items-center')
+        h3(class='p-5 text-center') Your&#39;re about to start a journey<br/> into helping someone in their learning.
+        q(class='lead mb-3') Anything worth learning, is worth sharing.
+
+    div(class='row')
+      div(class='col-12 col-sm-6 col-md-5 d-flex flex-column justify-content-center align-items-center mx-auto form-box')
+        form(action="#", method="post" class='w-100' id='resource-form')
+          //- title
+          div(class='form-group')
+            label(for="sharerName" class='sr-only') Your Name (optional)
+            input(type="text", name="sharerName", id='sharerName' placeholder='Your Name (optional)' class='form-control')
+
+          //- type
+          div(class='form-group')
+            label(for="contentTitle" class='sr-only') Title
+            input(type="text", name="contentTitle", id='contentTitle' placeholder='Title' class='form-control')
+
+          //- url
+          div(class='form-group')
+            label(for="contentUrl" class='sr-only') Url
+            input(type="url", name="contentUrl",id="contentUrl" placeholder='Url (google drive, dropbox, link)' class='form-control')
+
+          //- category
+          div(class='form-group')
+            label(for="contentCategory" class='sr-only') Category
+            select(name="contentCategory" id='contentCategory' class='form-control')
+              each category in ['Blog','Article','Book','Uncategorized']
+                option(value= category)= category
+
+          button(type="submit" class='btn btn-md mt-3 btn-danger') Share content
+
+block scripts
+  script(src="/scripts/helpers/form-submit.js")

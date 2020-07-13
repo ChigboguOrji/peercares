@@ -1,0 +1,54 @@
+@charset "utf-8";
+:root {
+	--dark-blue: rgb(6, 47, 100);
+}
+.jumbotron,
+.navbar {
+	background: url(../img//BANNER.jpg);
+	background-position: right;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.navbar {
+	background: url(../img/sect-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.jumbotron {
+	min-height: 50vh;
+	border-radius: 0;
+	/* background: url(../img/white-paper.jpg); */
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	z-index: -1 !important;
+}
+
+.feature-box {
+	min-height: 80vh;
+}
+
+.img-box {
+	height: 300px;
+	min-height: 300px;
+	min-width: 100%;
+}
+
+/* .button-start {
+	background-color: indigo;
+} */
+.error-hero {
+	min-height: 70vh;
+}
+.error-box {
+	min-height: 40vh;
+}
+
+.form-box {
+	min-height: 400px;
+	margin-bottom: 150px;
+}
+
+/* RESOUCES */
+.resources-container {
+	min-height: 40vmax;
+}

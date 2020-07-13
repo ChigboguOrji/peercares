@@ -1,0 +1,50 @@
+extends layout
+
+//- header section
+block header
+  //- header hero
+  header(class='jumbotron bg-dark text-light')
+    div(class='row')
+      div(class='col-12 col-sm-6')
+        h1(class='display-3 font-weight-bold text-warning')= appName
+        h3 #[span(class='font-italic') #{appName}] is a peer-peer sharing platform.
+        p The zeal to build this platform was sparked by the zeal the developers community have in learning and sharing materials.
+        a(href="/contents/v1/new-resource" class='btn btn-light btn-lg my-5 px-md-5') Get started
+
+//- main body
+block main
+  div(class='container-fluid')
+    div(class='row align-items-center justify-contents-center flex-column-reverse flex-sm-row p-2 p-md-5 feature-box')
+
+      div(class='col-12 col-sm-8')
+        div(class='p-4')
+          h1 How is works
+          h4(class='text-danger font-italic') How do I start sharing?
+          p(class='lead') Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates sit mollitia architecto saepe quaerat quasi id nostrum enim, nisi numquam autem inventore fuga itaque illo maxime atque! Voluptatem, consectetur recusandae!
+
+          p(class='lead') Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates sit mollitia architecto saepe quaerat quasi id nostrum enim, nisi numquam autem inventore fuga itaque illo maxime atque! Voluptatem, consectetur recusandae!
+
+      div(class='col-12 col-sm-4 rounded overflow-hidden p-0 shadow-sm')
+        div(class='img-box')
+          //- h3 Knowledge shared is knowledge gained
+          img(src="/img/white-paper.jpg", alt="knowledge shared is knowledge gained", srcset="" class='img-fluid')
+
+
+    div(class='row align-items-center justify-contents-center flex-column-reverse flex-sm-row  bg-light border-top p-2 p-md-5 feature-box')
+      div(class='col-12 col-sm-8 order-sm-last')
+        div(class='p-4')
+          h1 Why it should be shared
+          h4(class='text-danger font-italic') Does it worth your time learning?
+          p(class='lead') Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates sit mollitia architecto saepe quaerat quasi id nostrum enim, nisi numquam autem inventore fuga itaque illo maxime atque! Voluptatem, consectetur recusandae!
+
+          p(class='lead') Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates sit mollitia architecto saepe quaerat quasi id nostrum enim, nisi numquam autem inventore fuga itaque illo maxime atque! Voluptatem, consectetur recusandae!
+
+      div(class='col-12 col-sm-4 order-sm-first rounded overflow-hidden p-0 shadow-sm')
+        div(class='img-box')
+          //- h2 Sharing is caring
+          img(src="/img/book-tile.jpg", alt="sharing is caring", srcset="" class='img-fluid')
+
+
+    div(class='row bg-light')
+      div(class='col-12 text-center py-5')
+        a(href="/contents/v1/new-resource" class='btn btn-danger btn-lg px-md-5 shadow-lg button-start') Start sharing

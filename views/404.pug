@@ -1,0 +1,12 @@
+extends layout
+
+block main
+  section(class='container text-center p-5 error-hero')
+    div(class='row justify-content-center align-items-center error-box')
+      div(class='col')
+        h1(class='text-danger display-3 font-weight-bold') #{code}
+        h2(class='text-danger font-weight-bold') #{message}
+
+    div(class='row justify-content-center align-items-center')
+      div(class='col-12 col-sm-6 justify-content-between mt-5')
+        h5 If this is an error, please contact the #[a(href='mailto:brightorji60@gmail.com') maintainers] or #[a(href='https://github/chigboguorji/shareit/issues') file an issue]

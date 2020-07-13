@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="x-ua-compatible", content="ie=edge")
+    meta(name="author", content="Chigbogu Orji")
+    link(rel="stylesheet", href="/stylesheet/bootstrap.min.css")
+    link(rel="stylesheet", href="/stylesheet/custom.css")
+    title Share It
+  body(class='bg-white text-secondary')
+    //- include the header nav
+    include includes/_topNav.pug
+    block header
+
+    block main
+
+
+    block footer
+      include includes/_footer.pug
+
+
+    script(src="/scripts/jquery.slim.js")
+    script(src="/scripts/jquery.min.js")
+    script(src="/scripts/popper.min.js")
+    script(src="/scripts/bootstrap.min.js")
+
+    block scripts
