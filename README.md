@@ -1,6 +1,5 @@
 ## SHARE IT
-
----
+-------------
 
 ![Share It Banner](public/img/shareit-avatar.PNG,"Share It is the right place to show love")
 
