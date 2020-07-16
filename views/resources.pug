@@ -1,7 +1,24 @@
 extends layout
 
 block main
-  main(class='container-fluid resources-container')
+  main(class='container-fluid resources-container border-bottom')
     section(class='row bg-light')
-      div(class='col-12 col-sm-8 py-5')
+      div(class='col-12 py-2 py-sm-4 bg-secondary text-light')
         h1= title || 'All resource'
+
+      div(class='col-12 d-flex flex-wrap justify-content-around pb-5')
+        if contents.length
+          each content in contents
+            div(class='card mt-2 mt-sm-3 content-card')
+              div(class='card-body')
+                h4(class='card-title')= content.contentTitle || 'Untitled'
+                p(class='card-text') Category: #{content.contentCategory}
+
+                a(href=content.contentUrl, target="_blank", rel='noopenner noreferrer', class='card-link') #{content.contentUrl || 'Missing or broken link'}
+
+              footer(class='card-footer')
+                small(class='font-weight-bold text-danger') Posted by: #{content.sharerName} - #[span(class='text-secondary font-italic') #{content.createdAt}]
+        else
+          div(class='col text-center py-5')
+            h5 There is no content available at this moment,
+              p(class='lead font-italic') #[a(href="/contents/v1/new-resource") you can start sharing content here]

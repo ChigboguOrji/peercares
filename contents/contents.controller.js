@@ -28,6 +28,13 @@ module.exports = {
 	// GET
 	// resoources list
 	getAllResource: (req, res, next) => {
-		res.render('resources', { title: 'Resources' })
+		Contents.find({}, (err, contents) => {
+			if (err) next(err)
+			// console.log(contents)
+			return res.render('resources', {
+				title: 'Resources',
+				contents: contents,
+			})
+		})
 	},
 }
