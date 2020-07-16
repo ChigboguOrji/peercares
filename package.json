@@ -5,6 +5,7 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "yarn run server",
+		"start:dev":"yarn run server env=dev",
 		"server": "nodemon index.js",
 		"test": "jest --watchAll"
 	},

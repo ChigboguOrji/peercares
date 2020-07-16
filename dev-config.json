@@ -1,0 +1,13 @@
+{
+	"PORT": 5000,
+	"URI": "mongodb://127.0.0.1:27017/contentshare",
+	"OPTIONS": {
+		"useNewUrlParser": true,
+		"useCreateIndex": true,
+		"useFindAndModify": true,
+		"useUnifiedTopology": true,
+		"keepAlive": true,
+		"keepAliveInitialDelay": 3000,
+		"poolSize": 10
+	}
+}
