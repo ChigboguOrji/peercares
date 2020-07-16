@@ -8,6 +8,6 @@ if (process.env.NODE_ENV !== "test") {
       }
     }
   });
-} else env = require("./dev-config.json");
+} else env = require("./prod-config.json");
 
 module.exports = env;
