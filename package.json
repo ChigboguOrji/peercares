@@ -19,7 +19,7 @@
 		"morgan": "^1.10.0",
 		"nodemon": "^2.0.4",
 		"popper.js": "^1.16.1",
-		"pug": "^3.0.0"
+		"pug": "^3.0.1"
 	},
 	"devDependencies": {
 		"jest": "^26.1.0",
